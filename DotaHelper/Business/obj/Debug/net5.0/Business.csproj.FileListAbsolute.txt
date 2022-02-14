@@ -1,0 +1,17 @@
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\Business.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\Common.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\DataModel.dll
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\DataModel.pdb
+C:\Users\wwg\Desktop\D\DotaHelper\Business\bin\Debug\net5.0\Common.pdb
+C:\Users\wwg\Desktop\D\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
