@@ -53,9 +53,6 @@ namespace Business.Parser
 
             try
             {
-                var x = 1 - 1;
-                var xx = 1 / x;
-
                 for (int j = 0; j < scan / maxRequests; j++)
                 {
                     var stopWatch = new Stopwatch();

@@ -27,7 +27,10 @@ namespace API.Service
         public void ConfigureServices(IServiceCollection services)
         {
             var dbSettingSection = Configuration.GetSection("ConnectionString");
-            services.Configure<ConnectionString>(c => dbSettingSection.Bind(c));
+            var loggingSettings = Configuration.GetSection("Logging");
+
+            services.Configure<ConnectionString>(x => dbSettingSection.Bind(x));
+            services.Configure<LoggingSettings>(x => loggingSettings.Bind(x));
 
             var dbConnectionStringSection = Configuration.GetSection("ConnectionString");
 
@@ -39,9 +42,7 @@ namespace API.Service
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            var loggingSettings = new LoggingSettings();
-            Configuration.GetSection("Logging").Bind(loggingSettings);
-            services.AddSingleton<ICustomFileLogger>(x => ActivatorUtilities.CreateInstance<CustomFileLogger>(x, loggingSettings.LogsFolderPath));
+            services.AddSingleton<ICustomFileLogger, CustomFileLogger>();
 
             services.AddMvc();
 
