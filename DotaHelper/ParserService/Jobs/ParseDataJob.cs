@@ -1,4 +1,5 @@
 ﻿using Business.Parser;
+using Common.Logger;
 using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using System;
@@ -13,10 +14,12 @@ namespace ParserService.Jobs
         private static bool IsJobRunned { get; set; }
 
         private readonly IServiceProvider _provider;
+        private readonly ICustomFileLogger _logger;
 
-        public ParseDataJob(IServiceProvider provider)
+        public ParseDataJob(IServiceProvider provider, ICustomFileLogger logger)
         {
             _provider = provider;
+            _logger = logger;
         }
 
         public async Task Execute(IJobExecutionContext context)
@@ -35,13 +38,12 @@ namespace ParserService.Jobs
 
                     using (var scope = _provider.CreateScope())
                     {
-                        //To do => add logger here
                         await parserService.Parse();
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine($"Exciption {e.Message}");
+                    _logger.Log(ex, "Execute job");
                 }
                 finally
                 {

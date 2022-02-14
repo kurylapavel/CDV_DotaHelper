@@ -1,5 +1,6 @@
 using Business.Main;
 using Business.Parser;
+using Common.Logger;
 using Common.Settings;
 using DataModel;
 using DataModel.Profilies;
@@ -28,20 +29,19 @@ namespace API.Service
             var dbSettingSection = Configuration.GetSection("ConnectionString");
             services.Configure<ConnectionString>(c => dbSettingSection.Bind(c));
 
-            //need add logger in future
-
             var dbConnectionStringSection = Configuration.GetSection("ConnectionString");
 
             services.Configure<ConnectionString>(x => dbConnectionStringSection.Bind(x));
-
-            //var connection = $"Host=185.233.200.171;Port=5432;Database=DotaHelper;" +
-            //    $"Username=postgres;Password=dotoproj1;";
 
             //services.AddDbContext<AppDbContext>();
             services.AddDbContext<AppDbContext>(ServiceLifetime.Transient);
             services.AddScoped<DbContext, AppDbContext>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            var loggingSettings = new LoggingSettings();
+            Configuration.GetSection("Logging").Bind(loggingSettings);
+            services.AddSingleton<ICustomFileLogger>(x => ActivatorUtilities.CreateInstance<CustomFileLogger>(x, loggingSettings.LogsFolderPath));
 
             services.AddMvc();
 

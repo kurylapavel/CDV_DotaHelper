@@ -1,4 +1,5 @@
 ﻿using Business.Dto;
+using Common.Logger;
 using DataModel;
 using DataModel.Entities;
 using DataModel.OpenDota;
@@ -18,15 +19,17 @@ namespace Business.Parser
     public class ParserService : IParserService
     {
         private readonly DbContext Context;
+        private readonly ICustomFileLogger _logger;
 
         private IQueryable<Hero> Heroes;
         private List<Matches> Matches = new List<Matches>();
         private ulong MatchId;
         private bool ScanInProgress  = true;
 
-        public ParserService(DbContext context)
+        public ParserService(DbContext context, ICustomFileLogger logger)
         {
             Context = context;
+            _logger = logger;
 
             Heroes = GetHeroes();
         }
@@ -77,7 +80,7 @@ namespace Business.Parser
             }
             catch (Exception ex)
             {
-                // To do => add logger 
+                _logger.Log(ex, "try create tasks");
             }
 
             tasks = tasks.Where(x => x != null).ToArray();
@@ -100,7 +103,7 @@ namespace Business.Parser
                     }
                     catch (Exception ex)
                     {
-                        // To do => add logger
+                        _logger.Log(ex, "Process second thread");
                     }
                     
                 }
@@ -321,9 +324,9 @@ namespace Business.Parser
 
                 return data;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                // add logger 
+                _logger.Log(ex, "Request open dota api");
                 await IncreaseMathId();
                 return null;
             }

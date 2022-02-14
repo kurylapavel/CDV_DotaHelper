@@ -1,5 +1,6 @@
 ﻿using Business.Parser;
 using Common.JobRunner;
+using Common.Logger;
 using Common.Settings;
 using DataModel;
 using Microsoft.EntityFrameworkCore;
@@ -32,9 +33,11 @@ namespace ParserService
             var appSettingsSection = configuration.GetSection("AppSettings");
             var appSettings = appSettingsSection.Get<AppSettings>();
             var dbSettingsSection = configuration.GetSection("connectionString");
+            var loggingSettings = configuration.GetSection("Logging");
 
             services.Configure<AppSettings>(x => appSettingsSection.Bind(x));
             services.Configure<ConnectionString>(x => dbSettingsSection.Bind(x));
+            services.Configure<LoggingSettings>(x => loggingSettings.Bind(x));
 
             //services.AddDbContext<AppDbContext>();
             services.AddDbContext<AppDbContext>(ServiceLifetime.Transient);
@@ -44,6 +47,8 @@ namespace ParserService
 
             services.AddSingleton<IJobFactory, SingletonJobFactory>();
             services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+
+            services.AddSingleton<ICustomFileLogger, CustomFileLogger>();
 
             services.AddSingleton<ParseDataJob>();
 
