@@ -269,7 +269,7 @@ namespace Business.Parser
 
         private async Task<List<ProxyCredentials>> GetCredentials()
         {
-            var proxies = await File.ReadAllLinesAsync("../../../../Business/Parser/Proxy/Proxy.txt");
+            var proxies = await File.ReadAllLinesAsync("Proxy/Proxy.txt");
 
             var result = new List<ProxyCredentials>();
 
