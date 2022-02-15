@@ -42,7 +42,7 @@ namespace Business.Parser
             var creadentials = await GetCredentials();
             var proxyCount = creadentials.Count;
 
-            int scan = 900;
+            int scan = 10000000;
 
             MatchId = await GetMathchIdStart();
 
@@ -266,7 +266,7 @@ namespace Business.Parser
 
         private async Task<List<ProxyCredentials>> GetCredentials()
         {
-            var proxies = await File.ReadAllLinesAsync("../../../../Business/Parser/Proxy/Proxy.txt");
+            var proxies = await File.ReadAllLinesAsync("Proxy/Proxy.txt");
 
             var result = new List<ProxyCredentials>();
 
