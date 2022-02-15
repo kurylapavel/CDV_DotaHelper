@@ -42,7 +42,7 @@ namespace Business.Parser
             var creadentials = await GetCredentials();
             var proxyCount = creadentials.Count;
 
-            int scan = 900;
+            int scan = 40000;
 
             MatchId = await GetMathchIdStart();
 
@@ -66,12 +66,15 @@ namespace Business.Parser
                         taskIndex++;
                     }
 
-                    var delay = 60000 - (int)stopWatch.Elapsed.TotalMilliseconds;
-                    stopWatch.Stop();
-
-                    if (scan > taskIndex + 1)
+                    if (stopWatch.Elapsed.TotalMilliseconds > 60000)
                     {
-                        Thread.Sleep(delay);
+                        var delay = 60000 - (int)stopWatch.Elapsed.TotalMilliseconds;
+                        stopWatch.Stop();
+
+                        if ((scan > taskIndex + 1) && delay > 0)
+                        {
+                            Thread.Sleep(delay);
+                        }
                     }
                 }
             }
