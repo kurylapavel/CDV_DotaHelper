@@ -10,3 +10,15 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\ref\Common.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.pdb
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.deps.json
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.dll
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\ref\Common.dll
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.pdb
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.dll
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\ref\Common.dll
+C:\Users\Kislyy\Desktop\Studia\Dyplomka\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.pdb

@@ -42,9 +42,9 @@
             // 
             this.MainPage.CreationProperties = null;
             this.MainPage.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.MainPage.Location = new System.Drawing.Point(-2, 0);
+            this.MainPage.Location = new System.Drawing.Point(-2, 9);
             this.MainPage.Name = "MainPage";
-            this.MainPage.Size = new System.Drawing.Size(855, 635);
+            this.MainPage.Size = new System.Drawing.Size(1286, 614);
             this.MainPage.Source = new System.Uri("http://localhost:4200", System.UriKind.Absolute);
             this.MainPage.TabIndex = 0;
             this.MainPage.ZoomFactor = 1D;
@@ -96,6 +96,7 @@
             this.Controls.Add(this.LBSelectFolder);
             this.Controls.Add(this.BRRefresh);
             this.Controls.Add(this.MainPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.MainPage)).EndInit();
