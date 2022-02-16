@@ -30,7 +30,7 @@ namespace DotaHelper_Desktop
             folderBrowserDialog1.ShowDialog();
 
             var dotaFolderPath = folderBrowserDialog1.SelectedPath;
-            var dotaFilePath = $"{dotaFolderPath}\\beta\\game\\dota\\server_log.txt";
+            var dotaFilePath = $"{dotaFolderPath}\\game\\dota\\server_log.txt";
             
             if (!File.Exists(dotaFilePath))
             {
@@ -159,7 +159,7 @@ namespace DotaHelper_Desktop
 
         private async void BRRefresh_Click(object sender, EventArgs e)
         {
-            var path = $"{DotaFolderPath}\\beta\\game\\dota\\server_log.txt";
+            var path = $"{DotaFolderPath}\\game\\dota\\server_log.txt";
 
             if (File.Exists(path))
             {
@@ -181,7 +181,7 @@ namespace DotaHelper_Desktop
             if (File.Exists("DotaFolderPath.txt"))
             {
                 var dotaFolderPath = await File.ReadAllTextAsync("DotaFolderPath.txt");
-                var dotaFilePath = $"{dotaFolderPath}\\beta\\game\\dota\\server_log.txt";
+                var dotaFilePath = $"{dotaFolderPath}\\game\\dota\\server_log.txt";
 
                 if (File.Exists(dotaFilePath))
                 {
