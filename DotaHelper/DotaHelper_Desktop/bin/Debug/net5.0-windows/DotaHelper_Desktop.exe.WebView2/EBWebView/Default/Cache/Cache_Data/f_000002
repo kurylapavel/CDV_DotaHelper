@@ -1,0 +1,912 @@
+"use strict";
+(self["webpackChunkPavel"] = self["webpackChunkPavel"] || []).push([["main"],{
+
+/***/ 5041:
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
+/* harmony export */ });
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data */ 8387);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _service_http_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./service/http.service */ 561);
+
+
+
+function AppComponent_little_card_3_Template(rf, ctx) { if (rf & 1) {
+    const _r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "little-card", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function AppComponent_little_card_3_Template_little_card_click_0_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r9); const hero_r7 = restoredCtx.$implicit; const ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r8.select(hero_r7.heroId); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const hero_r7 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("hero", hero_r7);
+} }
+function AppComponent_app_card_9_Template(rf, ctx) { if (rf & 1) {
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "app-card", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function AppComponent_app_card_9_Template_app_card_click_0_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r12); const hero_r10 = restoredCtx.$implicit; const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r11.returnHero(hero_r10.heroId, 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const hero_r10 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("hero", hero_r10);
+} }
+function AppComponent_app_card_14_Template(rf, ctx) { if (rf & 1) {
+    const _r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "app-card", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function AppComponent_app_card_14_Template_app_card_click_0_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r15); const hero_r13 = restoredCtx.$implicit; const ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"](); return ctx_r14.returnHero(hero_r13.heroId, 2); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const hero_r13 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("hero", hero_r13);
+} }
+function AppComponent_20_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](0, "RECOMMENDED HEROES: ");
+} }
+function AppComponent_20_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, AppComponent_20_ng_template_0_Template, 1, 0, "ng-template");
+} }
+function AppComponent_ng_template_21_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](0, "Check heroes and click button.");
+} }
+function AppComponent_app_card_23_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "app-card", 16);
+} if (rf & 2) {
+    const hero_r17 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("hero", hero_r17);
+} }
+class AppComponent {
+    constructor(http) {
+        this.http = http;
+        this.heroes = _data__WEBPACK_IMPORTED_MODULE_0__.heroes.map(hero => {
+            return Object.assign(Object.assign({}, hero), { selected: false });
+        });
+        this.teamOneHeroes = [];
+        this.teamTwoHeroes = [];
+        this.recommendedHeroes = [];
+    }
+    select(id) {
+        id = this.heroes.findIndex(hero => hero.heroId === id);
+        if (this.heroes[id].selected)
+            return;
+        if (this.teamOneHeroes.length < 2) {
+            this.heroes[id].selected = true;
+            this.teamOneHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+        else if (this.teamTwoHeroes.length < 2) {
+            this.heroes[id].selected = true;
+            this.teamTwoHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+        else if (this.teamOneHeroes.length < 4) {
+            this.heroes[id].selected = true;
+            this.teamOneHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+        else if (this.teamTwoHeroes.length < 4) {
+            this.heroes[id].selected = true;
+            this.teamTwoHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+        else if (this.teamOneHeroes.length < 5) {
+            this.heroes[id].selected = true;
+            this.teamOneHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+        else if (this.teamTwoHeroes.length < 5) {
+            this.heroes[id].selected = true;
+            this.teamTwoHeroes.push(Object.assign(Object.assign({}, this.heroes[id]), { selected: false }));
+        }
+    }
+    getRecommended() {
+        this.http.getHeroes(this.teamOneHeroes, this.teamTwoHeroes)
+            .subscribe(her => this.recommendedHeroes = her);
+    }
+    returnHero(heroId, command) {
+        const id = this.heroes.findIndex(hero => hero.heroId === heroId);
+        this.heroes[id].selected = false;
+        if (command === 1) {
+            this.teamOneHeroes = this.teamOneHeroes.filter(hero => hero.heroId !== heroId);
+        }
+        else {
+            this.teamTwoHeroes = this.teamTwoHeroes.filter(hero => hero.heroId !== heroId);
+        }
+    }
+}
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_service_http_service__WEBPACK_IMPORTED_MODULE_1__.HttpService)); };
+AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 24, vars: 6, consts: [[1, "wrapper"], [1, "parent"], [1, "heroes"], [3, "hero", "click", 4, "ngFor", "ngForOf"], [1, "checked-heroes"], [1, "team1"], [1, "cards"], [1, "team2"], [1, "button"], [3, "click"], [1, "recommend-heroes"], [2, "display", "flex", "justify-content", "center", "align-items", "center"], [4, "ngIf", "ngIfElse"], ["press", ""], [3, "hero", 4, "ngFor", "ngForOf"], [3, "hero", "click"], [3, "hero"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, AppComponent_little_card_3_Template, 1, 1, "little-card", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, "TEAM 1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](8, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](9, AppComponent_app_card_9_Template, 1, 1, "app-card", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](12, "TEAM 2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](13, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](14, AppComponent_app_card_14_Template, 1, 1, "app-card", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function AppComponent_Template_button_click_16_listener() { return ctx.getRecommended(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](17, "GET INFO");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](18, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](20, AppComponent_20_Template, 1, 0, undefined, 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](21, AppComponent_ng_template_21_Template, 1, 0, "ng-template", null, 13, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplateRefExtractor"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](23, AppComponent_app_card_23_Template, 1, 1, "app-card", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵreference"](22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.heroes);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.teamOneHeroes);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.teamTwoHeroes);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.recommendedHeroes.length)("ngIfElse", _r4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.recommendedHeroes);
+    } }, styles: [".wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 34vw 34vw 28vw;\n  grid-template-rows: 78vh 18vh;\n  grid-column-gap: 10px;\n  grid-row-gap: 10px;\n  color: white;\n  font-size: 20px;\n  grid-template-areas: \"heroes heroes checked-heroes\" \"button recommend-heroes recommend-heroes\";\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .heroes[_ngcontent-%COMP%] {\n  grid-area: heroes;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%] {\n  grid-area: checked-heroes;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .button[_ngcontent-%COMP%] {\n  grid-area: button;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .recommend-heroes[_ngcontent-%COMP%] {\n  grid-area: recommend-heroes;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .heroes[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  overflow-y: auto;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .heroes[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 3px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .heroes[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;\n  background-color: #383838;\n  border-radius: 10px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .heroes[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background: linear-gradient(180deg, #00c6fb, #005bea);\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%] {\n  border: 5px solid #383838;\n  border-radius: 10px;\n  display: flex;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team1[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  flex: 50%;\n  height: 100%;\n  border-right: 5px solid #383838;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team1[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%] {\n  overflow: auto;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team1[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 3px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team1[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;\n  background-color: #383838;\n  border-radius: 10px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team1[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background: linear-gradient(180deg, #00c6fb, #005bea);\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team2[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  flex-direction: column;\n  flex: 50%;\n  height: 100%;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team2[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%] {\n  overflow: auto;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team2[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 3px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team2[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;\n  background-color: #383838;\n  border-radius: 10px;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .checked-heroes[_ngcontent-%COMP%]   .team2[_ngcontent-%COMP%]   .cards[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  background: linear-gradient(180deg, #00c6fb, #005bea);\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .button[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .button[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 70px;\n  background: #2b2b2c;\n  border-radius: 5px;\n  font-size: 50px;\n  color: #fff;\n}\n.wrapper[_ngcontent-%COMP%]   .parent[_ngcontent-%COMP%]   .recommend-heroes[_ngcontent-%COMP%] {\n  border: 5px solid #383838;\n  border-radius: 10px;\n  display: flex;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFvQkE7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQW5CRjtBQXFCRTtFQUNFLGFBQUE7RUFDQSxxQ0FBQTtFQUNBLDZCQUFBO0VBQ0EscUJBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0VBQ0EsOEZBQ0E7QUFwQko7QUF1Qkk7RUFBVSxpQkFBQTtBQXBCZDtBQXFCSTtFQUFrQix5QkFBQTtBQWxCdEI7QUFtQkk7RUFBVSxpQkFBQTtBQWhCZDtBQWlCSTtFQUFvQiwyQkFBQTtBQWR4QjtBQWdCSTtFQUNFLGFBQUE7RUFDQSxlQUFBO0VBQ0EsdUJBQUE7RUFDQSxnQkFBQTtBQWROO0FBN0JFO0VBQ0UsVUFBQTtBQStCSjtBQTVCRTtFQUNFLGdFQUFBO0VBQ0EseUJBVEc7RUFVSCxtQkFBQTtBQThCSjtBQTNCRTtFQUNFLG1CQUFBO0VBQ0EscURBQUE7QUE2Qko7QUFNSTtFQUNFLHlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0FBSk47QUFLTTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHNCQUFBO0VBQ0EsU0FBQTtFQUNBLFlBQUE7RUFDQSwrQkFBQTtBQUhSO0FBSVE7RUFDRSxjQUFBO0FBRlY7QUF6REU7RUFDRSxVQUFBO0FBMkRKO0FBeERFO0VBQ0UsZ0VBQUE7RUFDQSx5QkFURztFQVVILG1CQUFBO0FBMERKO0FBdkRFO0VBQ0UsbUJBQUE7RUFDQSxxREFBQTtBQXlESjtBQU5NO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0Esc0JBQUE7RUFDQSxTQUFBO0VBQ0EsWUFBQTtBQVFSO0FBUFE7RUFDRSxjQUFBO0FBU1Y7QUEvRUU7RUFDRSxVQUFBO0FBaUZKO0FBOUVFO0VBQ0UsZ0VBQUE7RUFDQSx5QkFURztFQVVILG1CQUFBO0FBZ0ZKO0FBN0VFO0VBQ0UsbUJBQUE7RUFDQSxxREFBQTtBQStFSjtBQWRJO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7QUFnQk47QUFmTTtFQUNFLFlBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0FBaUJSO0FBYkk7RUFDRSx5QkFBQTtFQUNBLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0FBZU4iLCJmaWxlIjoiYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJGdyYXk6ICMzODM4Mzg7XHJcblxyXG5AbWl4aW4gc2Nyb2xsIHtcclxuICAmOjotd2Via2l0LXNjcm9sbGJhciB7XHJcbiAgICB3aWR0aDogM3B4O1xyXG4gIH1cclxuXHJcbiAgJjo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sge1xyXG4gICAgLXdlYmtpdC1ib3gtc2hhZG93OiA1cHggNXB4IDVweCAtNXB4IHJnYmEoMzQsIDYwLCA4MCwgMC4yKSBpbnNldDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICRncmF5O1xyXG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICB9XHJcblxyXG4gICY6Oi13ZWJraXQtc2Nyb2xsYmFyLXRodW1iIHtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjMDBjNmZiLCAjMDA1YmVhKTtcclxuICB9XHJcbn1cclxuXHJcblxyXG4ud3JhcHBlcntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcblxyXG4gIC5wYXJlbnQge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMzR2dyAzNHZ3IDI4dnc7XHJcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDc4dmggMTh2aDtcclxuICAgIGdyaWQtY29sdW1uLWdhcDogMTBweDtcclxuICAgIGdyaWQtcm93LWdhcDogMTBweDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgIGdyaWQtdGVtcGxhdGUtYXJlYXM6XHJcbiAgICBcImhlcm9lcyBoZXJvZXMgY2hlY2tlZC1oZXJvZXNcIlxyXG4gICAgXCJidXR0b24gcmVjb21tZW5kLWhlcm9lcyByZWNvbW1lbmQtaGVyb2VzXCI7XHJcblxyXG4gICAgLmhlcm9lcyB7IGdyaWQtYXJlYTogaGVyb2VzOyB9XHJcbiAgICAuY2hlY2tlZC1oZXJvZXMgeyBncmlkLWFyZWE6IGNoZWNrZWQtaGVyb2VzOyB9XHJcbiAgICAuYnV0dG9uIHsgZ3JpZC1hcmVhOiBidXR0b247IH1cclxuICAgIC5yZWNvbW1lbmQtaGVyb2VzIHsgZ3JpZC1hcmVhOiByZWNvbW1lbmQtaGVyb2VzOyB9XHJcblxyXG4gICAgLmhlcm9lc3tcclxuICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgZmxleC13cmFwOiB3cmFwO1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgICAgb3ZlcmZsb3cteTogYXV0bztcclxuICAgICAgQGluY2x1ZGUgc2Nyb2xsKCk7XHJcbiAgICB9XHJcblxyXG4gICAgLmNoZWNrZWQtaGVyb2Vze1xyXG4gICAgICBib3JkZXI6IDVweCBzb2xpZCAkZ3JheTtcclxuICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgLnRlYW0xIHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAgICBmbGV4OiA1MCU7XHJcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgICAgIGJvcmRlci1yaWdodDogNXB4IHNvbGlkICRncmF5O1xyXG4gICAgICAgIC5jYXJkcyB7XHJcbiAgICAgICAgICBvdmVyZmxvdzogYXV0bztcclxuICAgICAgICAgIEBpbmNsdWRlIHNjcm9sbCgpO1xyXG4gICAgICAgIH1cclxuICAgICAgfVxyXG4gICAgICAudGVhbTIge1xyXG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICAgIGZsZXg6IDUwJTtcclxuICAgICAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICAgICAgLmNhcmRzIHtcclxuICAgICAgICAgIG92ZXJmbG93OiBhdXRvO1xyXG4gICAgICAgICAgQGluY2x1ZGUgc2Nyb2xsKCk7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcblxyXG4gICAgfVxyXG5cclxuICAgIC5idXR0b257XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBidXR0b24ge1xyXG4gICAgICAgIHdpZHRoOiA0MDBweDtcclxuICAgICAgICBoZWlnaHQ6IDcwcHg7XHJcbiAgICAgICAgYmFja2dyb3VuZDogIzJiMmIyYztcclxuICAgICAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICAgICAgZm9udC1zaXplOiA1MHB4O1xyXG4gICAgICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgLnJlY29tbWVuZC1oZXJvZXN7XHJcbiAgICAgIGJvcmRlcjogNXB4IHNvbGlkICRncmF5O1xyXG4gICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcblxyXG4iXX0= */"] });
+
+
+/***/ }),
+
+/***/ 6747:
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppModule": () => (/* binding */ AppModule)
+/* harmony export */ });
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 5041);
+/* harmony import */ var _card_little_card_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card-little/card.component */ 4894);
+/* harmony import */ var _card_little_card_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card/little-card.component */ 868);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 6362);
+
+
+
+
+
+
+
+class AppModule {
+}
+AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
+AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent] });
+AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ providers: [], imports: [[
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule,
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_5__.HttpClientModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent,
+        _card_little_card_component__WEBPACK_IMPORTED_MODULE_1__.CardComponent,
+        _card_little_card_component__WEBPACK_IMPORTED_MODULE_2__.LittleCardComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__.BrowserModule,
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_5__.HttpClientModule] }); })();
+_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetComponentScope"](_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent, [_angular_common__WEBPACK_IMPORTED_MODULE_6__.NgForOf, _card_little_card_component__WEBPACK_IMPORTED_MODULE_2__.LittleCardComponent,
+    _card_little_card_component__WEBPACK_IMPORTED_MODULE_1__.CardComponent, _angular_common__WEBPACK_IMPORTED_MODULE_6__.NgIf], []);
+
+
+/***/ }),
+
+/***/ 4894:
+/*!***********************************************!*\
+  !*** ./src/app/card-little/card.component.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CardComponent": () => (/* binding */ CardComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6362);
+
+
+function CardComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("selected", ctx_r0.hero.selected);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r0.getImageLink(ctx_r0.hero.heroId), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.hero.heroName);
+} }
+class CardComponent {
+    getImageLink(heroId) {
+        return `../../assets/images/heroes/${heroId}.png`;
+    }
+}
+CardComponent.ɵfac = function CardComponent_Factory(t) { return new (t || CardComponent)(); };
+CardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: CardComponent, selectors: [["app-card"]], inputs: { hero: "hero" }, decls: 1, vars: 1, consts: [["class", "wrapper", 4, "ngIf"], [1, "wrapper"], [1, "image"], [3, "src"], [1, "text"]], template: function CardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, CardComponent_div_0_Template, 5, 4, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hero);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgIf], styles: [".wrapper[_ngcontent-%COMP%] {\n  width: 230px;\n  height: 118px;\n  background: #383838;\n  margin: 10px;\n  border-radius: 5px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 94px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  height: 95%;\n  width: 95%;\n  border-radius: 5px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%]   img.selected[_ngcontent-%COMP%] {\n  filter: blur(10px);\n}\n.wrapper[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  height: 26px;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhcmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FBQ0Y7QUFDRTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBQ0EsWUFBQTtBQUNKO0FBQUk7RUFDRSxXQUFBO0VBQ0EsVUFBQTtFQUNBLGtCQUFBO0FBRU47QUFETTtFQUNFLGtCQUFBO0FBR1I7QUFFRTtFQUNFLFlBQUE7RUFDQSxrQkFBQTtBQUFKIiwiZmlsZSI6ImNhcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud3JhcHBlciB7XHJcbiAgd2lkdGg6IDIzMHB4O1xyXG4gIGhlaWdodDogMTE4cHg7XHJcbiAgYmFja2dyb3VuZDogIzM4MzgzODtcclxuICBtYXJnaW46IDEwcHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG5cclxuICAuaW1hZ2V7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgaGVpZ2h0OiA5NHB4O1xyXG4gICAgaW1nIHtcclxuICAgICAgaGVpZ2h0OiA5NSU7XHJcbiAgICAgIHdpZHRoOiA5NSU7XHJcbiAgICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgICAgJi5zZWxlY3RlZCB7XHJcbiAgICAgICAgZmlsdGVyOiBibHVyKDEwcHgpO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuICAudGV4dCB7XHJcbiAgICBoZWlnaHQ6IDI2cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"] });
+
+
+/***/ }),
+
+/***/ 868:
+/*!***********************************************!*\
+  !*** ./src/app/card/little-card.component.ts ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "LittleCardComponent": () => (/* binding */ LittleCardComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6362);
+
+
+function LittleCardComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("selected", ctx_r0.hero.selected);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx_r0.getImageLink(ctx_r0.hero.heroId), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.hero.heroName);
+} }
+class LittleCardComponent {
+    getImageLink(heroId) {
+        return `../../assets/images/heroes/${heroId}.png`;
+    }
+}
+LittleCardComponent.ɵfac = function LittleCardComponent_Factory(t) { return new (t || LittleCardComponent)(); };
+LittleCardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LittleCardComponent, selectors: [["little-card"]], inputs: { hero: "hero" }, decls: 1, vars: 1, consts: [["class", "wrapper", 4, "ngIf"], [1, "wrapper"], [1, "image"], [3, "src"], [1, "text"]], template: function LittleCardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, LittleCardComponent_div_0_Template, 5, 4, "div", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hero);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgIf], styles: [".wrapper[_ngcontent-%COMP%] {\n  width: 110px;\n  height: 50px;\n  background: #383838;\n  margin: 3px;\n  border-radius: 5px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 40px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  height: 95%;\n  width: 95%;\n  border-radius: 5px;\n}\n.wrapper[_ngcontent-%COMP%]   .image[_ngcontent-%COMP%]   img.selected[_ngcontent-%COMP%] {\n  filter: blur(10px);\n}\n.wrapper[_ngcontent-%COMP%]   .text[_ngcontent-%COMP%] {\n  height: 10px;\n  font-size: 10px;\n  text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpdHRsZS1jYXJkLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSxrQkFBQTtBQUNGO0FBQ0U7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLFlBQUE7QUFDSjtBQUFJO0VBQ0UsV0FBQTtFQUNBLFVBQUE7RUFDQSxrQkFBQTtBQUVOO0FBRE07RUFDRSxrQkFBQTtBQUdSO0FBRUU7RUFDRSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGtCQUFBO0FBQUoiLCJmaWxlIjoibGl0dGxlLWNhcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud3JhcHBlciB7XHJcbiAgd2lkdGg6IDExMHB4O1xyXG4gIGhlaWdodDogNTBweDtcclxuICBiYWNrZ3JvdW5kOiAjMzgzODM4O1xyXG4gIG1hcmdpbjogM3B4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxuXHJcbiAgLmltYWdle1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGhlaWdodDogNDBweDtcclxuICAgIGltZyB7XHJcbiAgICAgIGhlaWdodDogOTUlO1xyXG4gICAgICB3aWR0aDogOTUlO1xyXG4gICAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICAgICYuc2VsZWN0ZWQge1xyXG4gICAgICAgIGZpbHRlcjogYmx1cigxMHB4KTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLnRleHQge1xyXG4gICAgaGVpZ2h0OiAxMHB4O1xyXG4gICAgZm9udC1zaXplOiAxMHB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIH1cclxufVxyXG4iXX0= */"] });
+
+
+/***/ }),
+
+/***/ 8387:
+/*!*************************!*\
+  !*** ./src/app/data.ts ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "API": () => (/* binding */ API),
+/* harmony export */   "heroes": () => (/* binding */ heroes)
+/* harmony export */ });
+const API = 'http://localhost:5001/api/main/top-heroes';
+const heroes = [
+    {
+        "heroId": 1,
+        "heroName": "Anti-Mage"
+    },
+    {
+        "heroId": 2,
+        "heroName": "Axe"
+    },
+    {
+        "heroId": 3,
+        "heroName": "Bane"
+    },
+    {
+        "heroId": 4,
+        "heroName": "Bloodseeker"
+    },
+    {
+        "heroId": 5,
+        "heroName": "Crystal Maiden"
+    },
+    {
+        "heroId": 6,
+        "heroName": "Drow Ranger"
+    },
+    {
+        "heroId": 7,
+        "heroName": "Earthshaker"
+    },
+    {
+        "heroId": 8,
+        "heroName": "Juggernaut"
+    },
+    {
+        "heroId": 9,
+        "heroName": "Mirana"
+    },
+    {
+        "heroId": 10,
+        "heroName": "Morphling"
+    },
+    {
+        "heroId": 11,
+        "heroName": "Shadow Fiend"
+    },
+    {
+        "heroId": 12,
+        "heroName": "Phantom Lancer"
+    },
+    {
+        "heroId": 13,
+        "heroName": "Puck"
+    },
+    {
+        "heroId": 14,
+        "heroName": "Pudge"
+    },
+    {
+        "heroId": 15,
+        "heroName": "Razor"
+    },
+    {
+        "heroId": 16,
+        "heroName": "Sand King"
+    },
+    {
+        "heroId": 17,
+        "heroName": "Storm Spirit"
+    },
+    {
+        "heroId": 18,
+        "heroName": "Sven"
+    },
+    {
+        "heroId": 19,
+        "heroName": "Tiny"
+    },
+    {
+        "heroId": 20,
+        "heroName": "Vengeful Spirit"
+    },
+    {
+        "heroId": 21,
+        "heroName": "Windranger"
+    },
+    {
+        "heroId": 22,
+        "heroName": "Zeus"
+    },
+    {
+        "heroId": 23,
+        "heroName": "Kunkka"
+    },
+    {
+        "heroId": 25,
+        "heroName": "Lina"
+    },
+    {
+        "heroId": 26,
+        "heroName": "Lion"
+    },
+    {
+        "heroId": 27,
+        "heroName": "Shadow Shaman"
+    },
+    {
+        "heroId": 28,
+        "heroName": "Slardar"
+    },
+    {
+        "heroId": 29,
+        "heroName": "Tidehunter"
+    },
+    {
+        "heroId": 30,
+        "heroName": "Witch Doctor"
+    },
+    {
+        "heroId": 31,
+        "heroName": "Lich"
+    },
+    {
+        "heroId": 32,
+        "heroName": "Riki"
+    },
+    {
+        "heroId": 33,
+        "heroName": "Enigma"
+    },
+    {
+        "heroId": 34,
+        "heroName": "Tinker"
+    },
+    {
+        "heroId": 35,
+        "heroName": "Sniper"
+    },
+    {
+        "heroId": 36,
+        "heroName": "Necrophos"
+    },
+    {
+        "heroId": 37,
+        "heroName": "Warlock"
+    },
+    {
+        "heroId": 38,
+        "heroName": "Beastmaster"
+    },
+    {
+        "heroId": 39,
+        "heroName": "Queen of Pain"
+    },
+    {
+        "heroId": 40,
+        "heroName": "Venomancer"
+    },
+    {
+        "heroId": 41,
+        "heroName": "Faceless Void"
+    },
+    {
+        "heroId": 42,
+        "heroName": "Wraith King"
+    },
+    {
+        "heroId": 43,
+        "heroName": "Death Prophet"
+    },
+    {
+        "heroId": 44,
+        "heroName": "Phantom Assassin"
+    },
+    {
+        "heroId": 45,
+        "heroName": "Pugna"
+    },
+    {
+        "heroId": 46,
+        "heroName": "Templar Assassin"
+    },
+    {
+        "heroId": 47,
+        "heroName": "Viper"
+    },
+    {
+        "heroId": 48,
+        "heroName": "Luna"
+    },
+    {
+        "heroId": 49,
+        "heroName": "Dragon Knight"
+    },
+    {
+        "heroId": 50,
+        "heroName": "Dazzle"
+    },
+    {
+        "heroId": 51,
+        "heroName": "Clockwerk"
+    },
+    {
+        "heroId": 52,
+        "heroName": "Leshrac"
+    },
+    {
+        "heroId": 53,
+        "heroName": "Nature's Prophet"
+    },
+    {
+        "heroId": 54,
+        "heroName": "Lifestealer"
+    },
+    {
+        "heroId": 55,
+        "heroName": "Dark Seer"
+    },
+    {
+        "heroId": 56,
+        "heroName": "Clinkz"
+    },
+    {
+        "heroId": 57,
+        "heroName": "Omniknight"
+    },
+    {
+        "heroId": 58,
+        "heroName": "Enchantress"
+    },
+    {
+        "heroId": 59,
+        "heroName": "Huskar"
+    },
+    {
+        "heroId": 60,
+        "heroName": "Night Stalker"
+    },
+    {
+        "heroId": 61,
+        "heroName": "Broodmother"
+    },
+    {
+        "heroId": 62,
+        "heroName": "Bounty Hunter"
+    },
+    {
+        "heroId": 63,
+        "heroName": "Weaver"
+    },
+    {
+        "heroId": 64,
+        "heroName": "Jakiro"
+    },
+    {
+        "heroId": 65,
+        "heroName": "Batrider"
+    },
+    {
+        "heroId": 66,
+        "heroName": "Chen"
+    },
+    {
+        "heroId": 67,
+        "heroName": "Spectre"
+    },
+    {
+        "heroId": 68,
+        "heroName": "Ancient Apparition"
+    },
+    {
+        "heroId": 69,
+        "heroName": "Doom"
+    },
+    {
+        "heroId": 70,
+        "heroName": "Ursa"
+    },
+    {
+        "heroId": 71,
+        "heroName": "Spirit Breaker"
+    },
+    {
+        "heroId": 72,
+        "heroName": "Gyrocopter"
+    },
+    {
+        "heroId": 73,
+        "heroName": "Alchemist"
+    },
+    {
+        "heroId": 74,
+        "heroName": "Invoker"
+    },
+    {
+        "heroId": 75,
+        "heroName": "Silencer"
+    },
+    {
+        "heroId": 76,
+        "heroName": "Outworld Destroyer"
+    },
+    {
+        "heroId": 77,
+        "heroName": "Lycan"
+    },
+    {
+        "heroId": 78,
+        "heroName": "Brewmaster"
+    },
+    {
+        "heroId": 79,
+        "heroName": "Shadow Demon"
+    },
+    {
+        "heroId": 80,
+        "heroName": "Lone Druid"
+    },
+    {
+        "heroId": 81,
+        "heroName": "Chaos Knight"
+    },
+    {
+        "heroId": 82,
+        "heroName": "Meepo"
+    },
+    {
+        "heroId": 83,
+        "heroName": "Treant Protector"
+    },
+    {
+        "heroId": 84,
+        "heroName": "Ogre Magi"
+    },
+    {
+        "heroId": 85,
+        "heroName": "Undying"
+    },
+    {
+        "heroId": 86,
+        "heroName": "Rubick"
+    },
+    {
+        "heroId": 87,
+        "heroName": "Disruptor"
+    },
+    {
+        "heroId": 88,
+        "heroName": "Nyx Assassin"
+    },
+    {
+        "heroId": 89,
+        "heroName": "Naga Siren"
+    },
+    {
+        "heroId": 90,
+        "heroName": "Keeper of the Light"
+    },
+    {
+        "heroId": 91,
+        "heroName": "Io"
+    },
+    {
+        "heroId": 92,
+        "heroName": "Visage"
+    },
+    {
+        "heroId": 93,
+        "heroName": "Slark"
+    },
+    {
+        "heroId": 94,
+        "heroName": "Medusa"
+    },
+    {
+        "heroId": 95,
+        "heroName": "Troll Warlord"
+    },
+    {
+        "heroId": 96,
+        "heroName": "Centaur Warrunner"
+    },
+    {
+        "heroId": 97,
+        "heroName": "Magnus"
+    },
+    {
+        "heroId": 98,
+        "heroName": "Timbersaw"
+    },
+    {
+        "heroId": 99,
+        "heroName": "Bristleback"
+    },
+    {
+        "heroId": 100,
+        "heroName": "Tusk"
+    },
+    {
+        "heroId": 101,
+        "heroName": "Skywrath Mage"
+    },
+    {
+        "heroId": 102,
+        "heroName": "Abaddon"
+    },
+    {
+        "heroId": 103,
+        "heroName": "Elder Titan"
+    },
+    {
+        "heroId": 104,
+        "heroName": "Legion Commander"
+    },
+    {
+        "heroId": 105,
+        "heroName": "Techies"
+    },
+    {
+        "heroId": 106,
+        "heroName": "Ember Spirit"
+    },
+    {
+        "heroId": 107,
+        "heroName": "Earth Spirit"
+    },
+    {
+        "heroId": 108,
+        "heroName": "Underlord"
+    },
+    {
+        "heroId": 109,
+        "heroName": "Terrorblade"
+    },
+    {
+        "heroId": 110,
+        "heroName": "Phoenix"
+    },
+    {
+        "heroId": 111,
+        "heroName": "Oracle"
+    },
+    {
+        "heroId": 112,
+        "heroName": "Winter Wyvern"
+    },
+    {
+        "heroId": 113,
+        "heroName": "Arc Warden"
+    },
+    {
+        "heroId": 114,
+        "heroName": "Monkey King"
+    },
+    {
+        "heroId": 119,
+        "heroName": "Dark Willow"
+    },
+    {
+        "heroId": 120,
+        "heroName": "Pangolier"
+    },
+    {
+        "heroId": 121,
+        "heroName": "Grimstroke"
+    },
+    {
+        "heroId": 123,
+        "heroName": "Hoodwink"
+    },
+    {
+        "heroId": 126,
+        "heroName": "Void Spirit"
+    },
+    {
+        "heroId": 128,
+        "heroName": "Snapfire"
+    },
+    {
+        "heroId": 129,
+        "heroName": "Mars"
+    },
+    {
+        "heroId": 135,
+        "heroName": "Dawnbreaker"
+    },
+    {
+        "heroId": 136,
+        "heroName": "Marci"
+    }
+];
+
+
+/***/ }),
+
+/***/ 561:
+/*!*****************************************!*\
+  !*** ./src/app/service/http.service.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HttpService": () => (/* binding */ HttpService)
+/* harmony export */ });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data */ 8387);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
+
+
+
+
+class HttpService {
+    constructor(http) {
+        this.http = http;
+    }
+    getHeroes(team1, team2) {
+        let params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpParams();
+        team1.forEach((hero) => {
+            params = params.append(`Team1`, hero.heroId);
+        });
+        team2.forEach((hero) => {
+            params = params.append(`Team2`, hero.heroId);
+        });
+        return this.http.get(`${_data__WEBPACK_IMPORTED_MODULE_0__.API}`, { params, headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpHeaders({
+                'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-Requested-With'
+            }) });
+    }
+}
+HttpService.ɵfac = function HttpService_Factory(t) { return new (t || HttpService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__.HttpClient)); };
+HttpService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: HttpService, factory: HttpService.ɵfac, providedIn: 'root' });
+
+
+/***/ }),
+
+/***/ 2340:
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "environment": () => (/* binding */ environment)
+/* harmony export */ });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+const environment = {
+    production: false
+};
+/*
+ * For easier debugging in development mode, you can import the following file
+ * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
+ *
+ * This import should be commented out in production mode because it will have a negative impact
+ * on performance if an error is thrown.
+ */
+// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ 4431:
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 6747);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./environments/environment */ 2340);
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.production) {
+    (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.enableProdMode)();
+}
+_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule)
+    .catch(err => console.error(err));
+
+
+/***/ })
+
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(8202), __webpack_exec__(4431)));
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);
+//# sourceMappingURL=main.js.map

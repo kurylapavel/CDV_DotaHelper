@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b1cee5ef-791b-410e-89ff-6b16dfcca107": {
+      "ProjectGuid": "b1cee5ef-791b-410e-89ff-6b16dfcca107",
+      "DisplayName": "API.Service",
+      "ColorIndex": 0
+    },
+    "54ec0b6b-107f-455d-82b1-9f7689f3c6f0": {
+      "ProjectGuid": "54ec0b6b-107f-455d-82b1-9f7689f3c6f0",
+      "DisplayName": "Business",
+      "ColorIndex": 1
+    },
+    "12179b08-eb5a-4bf7-8ccb-0b2b7c199beb": {
+      "ProjectGuid": "12179b08-eb5a-4bf7-8ccb-0b2b7c199beb",
+      "DisplayName": "ParserService",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
