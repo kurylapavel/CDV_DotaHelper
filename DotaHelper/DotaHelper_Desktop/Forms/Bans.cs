@@ -13,39 +13,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DotaHelper_Desktop
+namespace DotaHelper_Desktop.Forms
 {
-    public partial class Form1 : Form
+    public partial class Bans : Form
     {
         private string DotaFolderPath;
 
-        public Form1()
+        public Bans()
         {
             InitializeComponent();
             ReadFolderPath();
         }
 
-        private async void BTSelectFolder_Click(object sender, EventArgs e)
-        {
-            folderBrowserDialog1.ShowDialog();
-
-            var dotaFolderPath = folderBrowserDialog1.SelectedPath;
-            var dotaFilePath = $"{dotaFolderPath}\\game\\dota\\server_log.txt";
-            
-            if (!File.Exists(dotaFilePath))
-            {
-                MessageBox.Show("Game not found");
-                return;
-            }
-            else
-            {
-                DotaFolderPath = dotaFolderPath;
-                LBSelectFolder.Text = dotaFolderPath;
-                await SaveFolderPath();
-
-                await GetUsersIdsFromFile(dotaFilePath);
-            }
-        }
+    
 
         private async Task GetUsersIdsFromFile(string filePath)
         {
@@ -92,7 +72,7 @@ namespace DotaHelper_Desktop
         {
             var tasks = new Task[5];
 
-            for(int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
             {
                 tasks[i] = RequestOpenDotaApi(enemyPlayerIds[i]);
             }
@@ -103,7 +83,7 @@ namespace DotaHelper_Desktop
 
             var allHeroIds = new List<int>();
 
-            foreach(var task in tasks)
+            foreach (var task in tasks)
             {
                 var heroIds = ((Task<List<int>>)task).Result;
 
@@ -117,14 +97,18 @@ namespace DotaHelper_Desktop
                 return;
             }
 
-            var topHeroId = allHeroIds.GroupBy(x => x).OrderByDescending(x => x.Count()).First();
+            var topHeroIds = allHeroIds.GroupBy(x => x).OrderByDescending(x => x.Count()).Take(5).ToList();
+            ShowHero(topHeroIds);
 
-            ShowHero(topHeroId.Key);
         }
 
-        private void ShowHero(int heroId)
+        private void ShowHero(List<IGrouping<int, int>> heroIds)
         {
-            PBBanHero.ImageLocation = $"HeroImages/{heroId}.png";
+            PBBanHero.ImageLocation = $"HeroImages/{heroIds[0].Key}.png";
+            PBBanHeroS1.ImageLocation = $"HeroImages/{heroIds[1].Key}.png";
+            PBBanHeroS2.ImageLocation = $"HeroImages/{heroIds[2].Key}.png";
+            PBBanHeroS3.ImageLocation = $"HeroImages/{heroIds[3].Key}.png";
+            PBBanHeroS4.ImageLocation = $"HeroImages/{heroIds[4].Key}.png";
         }
 
         private async Task<List<int>> RequestOpenDotaApi(string enemyPlayerId)
@@ -157,19 +141,6 @@ namespace DotaHelper_Desktop
             }
         }
 
-        private async void BRRefresh_Click(object sender, EventArgs e)
-        {
-            var path = $"{DotaFolderPath}\\game\\dota\\server_log.txt";
-
-            if (File.Exists(path))
-            {
-                await GetUsersIdsFromFile(path);
-            }
-            else
-            {
-                MessageBox.Show("Game folder is not  found, please select it again");
-            }
-        }
 
         private async Task SaveFolderPath()
         {
@@ -194,6 +165,60 @@ namespace DotaHelper_Desktop
                     LBSelectFolder.Text = "Select your dota 2 folder";
                 }
             }
+        }
+
+        private async void BTSelectFolder_Click_1(object sender, EventArgs e)
+        {
+
+            folderBrowserDialog1.ShowDialog();
+
+            var dotaFolderPath = folderBrowserDialog1.SelectedPath;
+            var dotaFilePath = $"{dotaFolderPath}\\game\\dota\\server_log.txt";
+
+            if (!File.Exists(dotaFilePath))
+            {
+                MessageBox.Show("Game not found");
+                return;
+            }
+            else
+            {
+                DotaFolderPath = dotaFolderPath;
+                LBSelectFolder.Text = dotaFolderPath;
+                await SaveFolderPath();
+
+                await GetUsersIdsFromFile(dotaFilePath);
+            }
+
+        }
+
+        private async void BRRefresh_Click_1(object sender, EventArgs e)
+        {
+            var path = $"{DotaFolderPath}\\game\\dota\\server_log.txt";
+
+            if (File.Exists(path))
+            {
+                await GetUsersIdsFromFile(path);
+            }
+            else
+            {
+                MessageBox.Show("Game folder is not  found, please select it again");
+            }
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
