@@ -41,6 +41,7 @@ namespace DotaHelper_Desktop.Forms
             this.pictureSettings = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelPath = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PBBanHeroS4 = new System.Windows.Forms.PictureBox();
             this.PBBanHeroS3 = new System.Windows.Forms.PictureBox();
@@ -171,6 +172,7 @@ namespace DotaHelper_Desktop.Forms
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(140)))));
+            this.panel2.Controls.Add(this.labelPath);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.LBSelectFolder);
             this.panel2.Controls.Add(this.pictureSettings);
@@ -181,6 +183,16 @@ namespace DotaHelper_Desktop.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(571, 569);
             this.panel2.TabIndex = 13;
+            // 
+            // labelPath
+            // 
+            this.labelPath.AutoSize = true;
+            this.labelPath.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPath.Location = new System.Drawing.Point(102, 525);
+            this.labelPath.Name = "labelPath";
+            this.labelPath.Size = new System.Drawing.Size(25, 20);
+            this.labelPath.TabIndex = 13;
+            this.labelPath.Text = "    ";
             // 
             // panel3
             // 
@@ -281,5 +293,6 @@ namespace DotaHelper_Desktop.Forms
         private System.Windows.Forms.PictureBox PBBanHeroS2;
         private System.Windows.Forms.PictureBox PBBanHeroS1;
         private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelPath;
     }
 }

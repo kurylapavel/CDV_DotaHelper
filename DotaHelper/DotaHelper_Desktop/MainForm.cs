@@ -117,6 +117,9 @@ namespace DotaHelper_Desktop
             myPoint = new Point(e.X, e.Y);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

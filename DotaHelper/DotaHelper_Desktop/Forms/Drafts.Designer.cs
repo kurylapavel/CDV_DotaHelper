@@ -48,6 +48,7 @@ namespace DotaHelper_Desktop.Forms
             this.MainPage.Source = new System.Uri("http://localhost:4200", System.UriKind.Absolute);
             this.MainPage.TabIndex = 1;
             this.MainPage.ZoomFactor = 1D;
+            this.MainPage.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.MainPage_NavigationCompleted);
             // 
             // panel1
             // 

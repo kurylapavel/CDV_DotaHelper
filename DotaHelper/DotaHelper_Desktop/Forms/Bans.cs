@@ -157,12 +157,12 @@ namespace DotaHelper_Desktop.Forms
                 if (File.Exists(dotaFilePath))
                 {
                     DotaFolderPath = dotaFolderPath;
-                    LBSelectFolder.Text = dotaFolderPath;
+                    labelPath.Text = dotaFolderPath;
                 }
                 else
                 {
                     DotaFolderPath = String.Empty;
-                    LBSelectFolder.Text = "Select your dota 2 folder";
+                    LBSelectFolder.Text = "Browse your Dota 2 folder location:";
                 }
             }
         }
