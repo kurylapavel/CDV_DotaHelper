@@ -64,6 +64,7 @@ namespace DotaHelper_Desktop
             this.panelBans.Tag = form;
             form.BringToFront();
             form.Show();
+            changePanel(form);
         }
 
 
@@ -82,6 +83,23 @@ namespace DotaHelper_Desktop
             this.panelBans.Tag = form;
             form.BringToFront();
             form.Show();
+            changePanel(form);
+            
+        }
+
+        private void changePanel(Form form)
+        {
+            if(form.Text == "Drafts")
+            {
+                labelTitle.ForeColor = Color.FromArgb(0, 216, 235);
+                labelTitle.Text = "Draft Tool";
+            }
+
+            if(form.Text == "Bans")
+            {
+                labelTitle.ForeColor = Color.FromArgb(205, 85, 84);
+                labelTitle.Text = "Ban Tool";
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -120,6 +138,39 @@ namespace DotaHelper_Desktop
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - myPoint.X;
+                this.Top += e.Y - myPoint.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            myPoint = new Point(e.X, e.Y);
+        }
+
+        private void labelTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - myPoint.X;
+                this.Top += e.Y - myPoint.Y;
+            }
+        }
+
+        private void labelTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            myPoint = new Point(e.X, e.Y);
         }
     }
 }

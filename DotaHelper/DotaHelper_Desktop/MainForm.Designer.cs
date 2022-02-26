@@ -36,8 +36,12 @@
             this.buttonDraft = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelBans = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
             this.panelNavBot.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNav
@@ -121,10 +125,49 @@
             // 
             this.panelBans.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panelBans.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBans.Location = new System.Drawing.Point(250, 0);
+            this.panelBans.Location = new System.Drawing.Point(250, 104);
             this.panelBans.Name = "panelBans";
-            this.panelBans.Size = new System.Drawing.Size(1030, 720);
+            this.panelBans.Size = new System.Drawing.Size(1030, 616);
             this.panelBans.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.labelClose);
+            this.panel1.Controls.Add(this.labelTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(250, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1030, 104);
+            this.panel1.TabIndex = 10;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Calibri", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelClose.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelClose.Location = new System.Drawing.Point(976, -8);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(47, 58);
+            this.labelClose.TabIndex = 1;
+            this.labelClose.Text = "x";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Tahoma", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.ForeColor = System.Drawing.Color.Silver;
+            this.labelTitle.Location = new System.Drawing.Point(-23, 24);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(220, 97);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Title";
+            this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseDown);
+            this.labelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseMove);
             // 
             // MainForm
             // 
@@ -132,6 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panelBans);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelNav);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -140,6 +184,8 @@
             this.panelNav.ResumeLayout(false);
             this.panelNavBot.ResumeLayout(false);
             this.panelNavBot.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +198,8 @@
         private System.Windows.Forms.Button buttonBans;
         private System.Windows.Forms.Button buttonDraft;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label labelTitle;
     }
 }
