@@ -62,20 +62,23 @@ namespace Business.Parser
                     {
                         var proxyIndex = i / Constants.RequestsPerMinute;
 
-                        tasks[taskIndex] = RequestOpenDotaApi(MatchId, creadentials[proxyIndex], i);
+                        int currId = i + (maxRequests * j);
+                        tasks[taskIndex] = RequestOpenDotaApi(MatchId, creadentials[proxyIndex], currId);
                         taskIndex++;
                     }
 
-                    if (stopWatch.Elapsed.TotalMilliseconds > 60000)
-                    {
-                        var delay = 60000 - (int)stopWatch.Elapsed.TotalMilliseconds;
-                        stopWatch.Stop();
+                    Thread.Sleep(60000);
+                //    if (stopWatch.Elapsed.TotalMilliseconds > 60000)
+                //    {
+                //        var delay = 60000 - (int)stopWatch.Elapsed.TotalMilliseconds;
+                //        stopWatch.Stop();
 
-                        if ((scan > taskIndex + 1) && delay > 0)
-                        {
-                            Thread.Sleep(delay);
-                        }
-                    }
+                //        if ((scan > taskIndex + 1) && delay > 0)
+                //        {
+                //            Thread.Sleep(delay);
+                //        }
+                //    }
+                //
                 }
             }
             catch (Exception ex)
