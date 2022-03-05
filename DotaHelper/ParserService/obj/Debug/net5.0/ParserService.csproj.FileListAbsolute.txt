@@ -56,8 +56,8 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.AssemblyInfoInputs.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.AssemblyInfo.cs
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.csproj.CoreCompileInputs.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.csproj.CopyComplete
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ref\ParserService.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.pdb
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.genruntimeconfig.cache
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\ParserService\obj\Debug\net5.0\ParserService.csproj.CopyComplete

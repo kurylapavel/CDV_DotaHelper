@@ -19,7 +19,9 @@ namespace DataModel
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connection = $"Host={_config.Host};Port={_config.Port};Database=DotaHelper;" +
+            var databaseName = _config.DatabaseName ?? "DotaHelper";
+
+            var connection = $"Host={_config.Host};Port={_config.Port};Database={databaseName};" +
                 $"Username={_config.UserName};Password={_config.Password};";
 
             //var connection = $"Host=185.233.200.171;Port=5432;Database=DotaHelper;" +

@@ -66,8 +66,8 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\AP
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\scopedcss\bundle\API.Service.styles.css
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\staticwebassets\API.Service.StaticWebAssets.Manifest.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.RazorTargetAssemblyInfo.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.csproj.CopyComplete
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\ref\API.Service.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.pdb
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.genruntimeconfig.cache
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\API.Service\obj\Debug\net5.0\API.Service.csproj.CopyComplete

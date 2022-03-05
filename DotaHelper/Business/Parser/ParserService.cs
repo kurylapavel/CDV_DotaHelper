@@ -34,6 +34,20 @@ namespace Business.Parser
             Heroes = GetHeroes();
         }
 
+        public ParserService(DbContext context)
+        {
+            Context = context;
+        }
+
+        public ParserService(ICustomFileLogger logger)
+        {
+            _logger = logger;
+        }
+
+        public ParserService()
+        {
+        }
+
         public async Task Parse()
         {
             var processDataThread = new Thread(ProcessDataThread);

@@ -2,7 +2,6 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\ref\Common.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Debug\net5.0\Common.pdb
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
@@ -34,3 +33,4 @@ K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.csproj.Co
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\ref\Common.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.pdb
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache

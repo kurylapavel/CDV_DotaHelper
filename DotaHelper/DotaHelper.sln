@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Service", "API.Service\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{54EC0B6B-107F-455D-82B1-9F7689F3C6F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaHelper_Desktop", "DotaHelper_Desktop\DotaHelper_Desktop.csproj", "{8BFB5AEF-1F7C-46A8-803C-072469D83D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaHelper_Desktop", "DotaHelper_Desktop\DotaHelper_Desktop.csproj", "{8BFB5AEF-1F7C-46A8-803C-072469D83D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaHelpet_Tests", "DotaHelpet_Tests\DotaHelpet_Tests.csproj", "{B94AFE3C-071C-4D8F-9C9E-B887B5AE9416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8BFB5AEF-1F7C-46A8-803C-072469D83D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BFB5AEF-1F7C-46A8-803C-072469D83D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BFB5AEF-1F7C-46A8-803C-072469D83D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94AFE3C-071C-4D8F-9C9E-B887B5AE9416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94AFE3C-071C-4D8F-9C9E-B887B5AE9416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94AFE3C-071C-4D8F-9C9E-B887B5AE9416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94AFE3C-071C-4D8F-9C9E-B887B5AE9416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

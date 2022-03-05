@@ -11,7 +11,7 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Busin
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\ref\Business.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\obj\Debug\net5.0\Business.csproj.CopyComplete

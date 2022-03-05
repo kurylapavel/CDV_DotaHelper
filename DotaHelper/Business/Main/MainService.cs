@@ -81,26 +81,6 @@ namespace Business.Main
 
             result = _mapper.Map<List<HeroesModel>>(heroes);
 
-            //if (dto.Team1 != null && dto.Team1.Any())
-            //{
-            //    var heroes = await Context.Set<Hero>()
-            //        .AsNoTracking()
-            //        .Where(x => dto.Team1.Contains(x.Id))
-            //        .Take(3)
-            //        .ToListAsync();
-
-            //    result = _mapper.Map<List<HeroesModel>>(heroes.OrderBy(x => x.Id));
-            //}
-            //else
-            //{
-            //    var heroes = await Context.Set<Hero>()
-            //        .AsNoTracking()
-            //        .Take(3)
-            //        .ToListAsync();
-
-            //    result = _mapper.Map<List<HeroesModel>>(heroes.OrderBy(x => x.Id));
-            //}
-
             return result;
         }
     }

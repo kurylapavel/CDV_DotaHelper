@@ -15,7 +15,32 @@
       "ProjectGuid": "12179b08-eb5a-4bf7-8ccb-0b2b7c199beb",
       "DisplayName": "ParserService",
       "ColorIndex": 2
+    },
+    "8bfb5aef-1f7c-46a8-803c-072469d83d8f": {
+      "ProjectGuid": "8bfb5aef-1f7c-46a8-803c-072469d83d8f",
+      "DisplayName": "DotaHelper_Desktop",
+      "ColorIndex": 3
+    },
+    "6e261d5d-68a2-4b46-bbf8-9127383b2721": {
+      "ProjectGuid": "6e261d5d-68a2-4b46-bbf8-9127383b2721",
+      "DisplayName": "DataModel",
+      "ColorIndex": 4
+    },
+    "b7ed7863-41fd-4979-86ad-6fdba382c3ce": {
+      "ProjectGuid": "b7ed7863-41fd-4979-86ad-6fdba382c3ce",
+      "DisplayName": "DotaHelper_Tests",
+      "ColorIndex": 5
+    },
+    "2d2ce146-4b3e-441e-800b-e7fe87078ce6": {
+      "ProjectGuid": "2d2ce146-4b3e-441e-800b-e7fe87078ce6",
+      "DisplayName": "test",
+      "ColorIndex": 6
+    },
+    "b94afe3c-071c-4d8f-9c9e-b887b5ae9416": {
+      "ProjectGuid": "b94afe3c-071c-4d8f-9c9e-b887b5ae9416",
+      "DisplayName": "DotaHelpet_Tests",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 8
 }

@@ -18,6 +18,12 @@ namespace Common.Logger
             _config = config;
         }
 
+        public CustomFileLogger(string path)
+        {
+            _config = Options.Create<LoggingSettings>(new LoggingSettings());
+            _config.Value.LogsFolderPath = path;
+        }
+
         public void Log(Exception ex, string when)
         {
             var sb = new StringBuilder();

@@ -12,13 +12,11 @@ C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\bin\Debug\ne
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\bin\Debug\net5.0-windows\Microsoft.Web.WebView2.WinForms.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\bin\Debug\net5.0-windows\Microsoft.Web.WebView2.Wpf.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.csproj.AssemblyReference.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Form1.resources
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.csproj.GenerateResource.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.AssemblyInfoInputs.cache
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.AssemblyInfo.cs
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.csproj.CoreCompileInputs.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.csproj.CopyComplete
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\ref\DotaHelper_Desktop.dll
 C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.pdb
@@ -187,3 +185,8 @@ K:\DotaHelper\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-wind
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Forms.Bans.resources
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Forms.Drafts.resources
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.MainForm.resources
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Forms.Bans.resources
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Forms.Drafts.resources
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.MainForm.resources
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.Properties.Resources.resources
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DotaHelper_Desktop\obj\Debug\net5.0-windows\DotaHelper_Desktop.csproj.CopyComplete

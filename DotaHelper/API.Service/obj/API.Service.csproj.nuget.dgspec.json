@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj": {}
+    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj": {}
   },
   "projects": {
-    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj": {
+    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj",
+        "projectUniqueName": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj",
         "projectName": "API.Service",
-        "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj",
-        "packagesPath": "C:\\Users\\blablacar\\.nuget\\packages\\",
-        "outputPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\API.Service\\obj\\",
+        "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\API.Service\\API.Service.csproj",
+        "packagesPath": "C:\\Users\\wwg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\API.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\blablacar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wwg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -34,14 +34,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj": {
-                "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj"
+              "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj"
               },
-              "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
-                "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj"
+              "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj"
               },
-              "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
-                "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj"
+              "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
+                "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj"
               }
             }
           }
@@ -93,6 +93,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -101,25 +107,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj": {
+    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\blablacar\\.nuget\\packages\\",
-        "outputPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Business\\obj\\",
+        "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\wwg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\blablacar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wwg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -135,8 +141,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
-                "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj"
+              "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
+                "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj"
               }
             }
           }
@@ -175,25 +181,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
+    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\blablacar\\.nuget\\packages\\",
-        "outputPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\obj\\",
+        "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\wwg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\blablacar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wwg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -273,25 +279,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
+    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj",
+        "projectUniqueName": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj",
         "projectName": "DataModel",
-        "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj",
-        "packagesPath": "C:\\Users\\blablacar\\.nuget\\packages\\",
-        "outputPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\DataModel\\obj\\",
+        "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\DataModel.csproj",
+        "packagesPath": "C:\\Users\\wwg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\blablacar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wwg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -307,8 +313,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
-                "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj"
+              "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj"
               }
             }
           }
@@ -373,7 +379,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

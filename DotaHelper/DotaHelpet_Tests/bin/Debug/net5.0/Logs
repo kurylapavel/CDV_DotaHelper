@@ -1,0 +1,50 @@
+2022-03-05 17:14:12
+Exception thrown when - Request open dota api
+Exception message - The remote server returned an error: (404) Not Found.
+Exception Source - System.Net.Requests
+Exception StackTrace -    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.WebRequest.<>c.<GetResponseAsync>b__68_2(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Business.Parser.ParserService.RequestOpenDotaApi(UInt64 matchId, ProxyCredentials credentials, Int32 id) in C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\Parser\ParserService.cs:line 325
+
+2022-03-05 17:17:14
+Exception thrown when - Request open dota api
+Exception message - Этот хост неизвестен. (wrong:59100)
+Exception Source - System.Net.Requests
+Exception StackTrace -    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.WebRequest.<>c.<GetResponseAsync>b__68_2(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Business.Parser.ParserService.RequestOpenDotaApi(UInt64 matchId, ProxyCredentials credentials, Int32 id) in C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\Parser\ParserService.cs:line 325
+
+2022-03-05 17:20:25
+Exception thrown when - Request open dota api
+Exception message - The remote server returned an error: (404) Not Found.
+Exception Source - System.Net.Requests
+Exception StackTrace -    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.WebRequest.<>c.<GetResponseAsync>b__68_2(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Business.Parser.ParserService.RequestOpenDotaApi(UInt64 matchId, ProxyCredentials credentials, Int32 id) in C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\Parser\ParserService.cs:line 325
+
+2022-03-05 19:01:19
+Exception thrown when - Request open dota api
+Exception message - Этот хост неизвестен. (wrong:59100)
+Exception Source - System.Net.Requests
+Exception StackTrace -    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.WebRequest.<>c.<GetResponseAsync>b__68_2(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Business.Parser.ParserService.RequestOpenDotaApi(UInt64 matchId, ProxyCredentials credentials, Int32 id) in C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\Parser\ParserService.cs:line 325
+
+2022-03-05 19:01:20
+Exception thrown when - Request open dota api
+Exception message - The remote server returned an error: (404) Not Found.
+Exception Source - System.Net.Requests
+Exception StackTrace -    at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.Net.WebRequest.<>c.<GetResponseAsync>b__68_2(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Business.Parser.ParserService.RequestOpenDotaApi(UInt64 matchId, ProxyCredentials credentials, Int32 id) in C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Business\Parser\ParserService.cs:line 325
+
