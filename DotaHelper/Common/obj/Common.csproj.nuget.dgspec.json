@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {}
+    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
+    "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
+        "projectUniqueName": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\wwg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wwg\\Desktop\\D\\CDV_DotaHelper\\DotaHelper\\Common\\obj\\",
+        "projectPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\blablacar\\.nuget\\packages\\",
+        "outputPath": "K:\\DotaHelper\\CDV_DotaHelper\\DotaHelper\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\wwg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\blablacar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -98,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

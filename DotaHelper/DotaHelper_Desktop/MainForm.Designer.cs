@@ -37,6 +37,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelBans = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelMinimize = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
@@ -133,6 +134,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel1.Controls.Add(this.labelMinimize);
             this.panel1.Controls.Add(this.labelClose);
             this.panel1.Controls.Add(this.labelTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -142,6 +144,18 @@
             this.panel1.TabIndex = 10;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // labelMinimize
+            // 
+            this.labelMinimize.AutoSize = true;
+            this.labelMinimize.Font = new System.Drawing.Font("Calibri", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMinimize.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelMinimize.Location = new System.Drawing.Point(940, -8);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(39, 58);
+            this.labelMinimize.TabIndex = 2;
+            this.labelMinimize.Text = "-";
+            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
             // 
             // labelClose
             // 
@@ -201,5 +215,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label labelMinimize;
     }
 }
