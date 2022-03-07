@@ -40,7 +40,17 @@
       "ProjectGuid": "b94afe3c-071c-4d8f-9c9e-b887b5ae9416",
       "DisplayName": "DotaHelpet_Tests",
       "ColorIndex": 7
+    },
+    "2699ccb5-1be8-405c-bdf7-1ea153db1288": {
+      "ProjectGuid": "2699ccb5-1be8-405c-bdf7-1ea153db1288",
+      "DisplayName": "Common",
+      "ColorIndex": 8
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }

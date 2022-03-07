@@ -26,6 +26,11 @@ namespace Business.Parser
         private ulong MatchId;
         private bool ScanInProgress  = true;
 
+        private List<HeroRatingTeam> HeroRatingTeams = new List<HeroRatingTeam>();
+        private List<HeroRatingEnemy> HeroRatingEnemies = new List<HeroRatingEnemy>();
+
+        private int SaveCounter = 0;
+
         public ParserService(DbContext context, ICustomFileLogger logger)
         {
             Context = context;
@@ -50,23 +55,32 @@ namespace Business.Parser
 
         public async Task Parse()
         {
-            var processDataThread = new Thread(ProcessDataThread);
-            processDataThread.Start();
+            //var processDataThread = new Thread(ProcessDataThread);
+            //processDataThread.Start();
 
             var creadentials = await GetCredentials();
             var proxyCount = creadentials.Count;
 
-            int scan = 40000;
+            int scan = 12000;
 
             MatchId = await GetMathchIdStart();
 
             var tasks = new Task[scan];
 
-            var maxRequests = proxyCount * Constants.RequestsPerMinute;
+            //var maxRequests = proxyCount * Constants.RequestsPerMinute;
+            var maxRequests = 12000;
             var taskIndex = 0;
 
             try
             {
+                this.HeroRatingTeams = await Context.Set<HeroRatingTeam>()
+                //.Where(x => x.HeroId == heroId && teamIds.Contains(x.TeamHeroId))
+                .ToListAsync();
+
+                this.HeroRatingEnemies = await Context.Set<HeroRatingEnemy>()
+                    //.Where(x => x.HeroId == heroId && enemyTeamIds.Contains(x.EnemyHeroId))
+                    .ToListAsync();
+
                 for (int j = 0; j < scan / maxRequests; j++)
                 {
                     var stopWatch = new Stopwatch();
@@ -103,6 +117,8 @@ namespace Business.Parser
             tasks = tasks.Where(x => x != null).ToArray();
 
             await Task.WhenAll(tasks);
+
+            Context.SaveChanges();
             ScanInProgress = false;
             await SaveMatchId();
         }
@@ -143,8 +159,6 @@ namespace Business.Parser
 
         private async Task ProcessData(Matches matches)
         {
-            var max = 15;
-
             for (int i=0; i < matches.Players.Count; i++)
             {
                 var player = matches.Players[i];
@@ -186,11 +200,7 @@ namespace Business.Parser
 
         private async Task UpdateDb(double points, int heroId, List<int> enemyTeamIds, List<int> teamIds)
         {
-            var heroRatingTeams = Context.Set<HeroRatingTeam>()
-                .Where(x => x.HeroId == heroId && teamIds.Contains(x.TeamHeroId));
-
-            var heroRatingEnemies = Context.Set<HeroRatingEnemy>()
-                .Where(x => x.HeroId == heroId && enemyTeamIds.Contains(x.EnemyHeroId));
+            Console.WriteLine("DbUpdateStarted");
 
             foreach (var teamId in teamIds)
             {
@@ -199,8 +209,8 @@ namespace Business.Parser
                     continue;
                 }
 
-                var heroRatingTeam = await heroRatingTeams
-                    .FirstOrDefaultAsync(x => x.TeamHeroId == teamId);
+                var heroRatingTeam = this.HeroRatingTeams
+                    .FirstOrDefault(x => x.TeamHeroId == teamId);
 
                 if (heroRatingTeam == null)
                 {
@@ -220,13 +230,13 @@ namespace Business.Parser
                     heroRatingTeam.ParsedMatches = heroRatingTeam.ParsedMatches + 1;
                 }
 
-                await Context.SaveChangesAsync();
+                //await Context.SaveChangesAsync();
             }
 
             foreach (var teamId in enemyTeamIds)
             {
-                var heroRatingEnemy = await heroRatingEnemies
-                    .FirstOrDefaultAsync(x => x.EnemyHeroId == teamId);
+                var heroRatingEnemy = this.HeroRatingEnemies
+                    .FirstOrDefault(x => x.EnemyHeroId == teamId);
 
                 if (heroRatingEnemy == null)
                 {
@@ -247,9 +257,8 @@ namespace Business.Parser
                     heroRatingEnemy.ParsedMatches = heroRatingEnemy.ParsedMatches + 1;
                 }
 
-                await Context.SaveChangesAsync();
+                //await Context.SaveChangesAsync();
             }
-
         }
 
         private double GetPointsWin(double heroKDA, double heroAvg)
@@ -316,7 +325,6 @@ namespace Business.Parser
 
         private async Task<Matches> RequestOpenDotaApi(ulong matchId, ProxyCredentials credentials, int id)
         {
-            Console.WriteLine($"for id: {id}");
             try
             {
                 HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create($"{Constants.DefaulOpenDotaApi}/matches/{matchId}");
@@ -339,11 +347,14 @@ namespace Business.Parser
 
                 Matches.Add(data);
 
+                Console.WriteLine($"Data parsed, matches count - {Matches.Count}");
+                await ProcessData(data);
+
                 return data;
             }
             catch (Exception ex)
             {
-                _logger.Log(ex, "Request open dota api");
+                //_logger.Log(ex, "Request open dota api");
                 await IncreaseMathId();
                 return null;
             }

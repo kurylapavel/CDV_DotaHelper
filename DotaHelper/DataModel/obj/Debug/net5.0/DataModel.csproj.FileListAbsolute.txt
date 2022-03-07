@@ -51,4 +51,3 @@ K:\DotaHelper\CDV_DotaHelper\DotaHelper\DataModel\obj\Debug\net5.0\DataModel.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DataModel\obj\Debug\net5.0\ref\DataModel.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DataModel\obj\Debug\net5.0\DataModel.pdb
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\DataModel\obj\Debug\net5.0\DataModel.genruntimeconfig.cache
-C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\DataModel\obj\Debug\net5.0\DataModel.csproj.CopyComplete

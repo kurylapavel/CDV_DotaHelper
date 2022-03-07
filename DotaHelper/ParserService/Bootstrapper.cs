@@ -41,7 +41,7 @@ namespace ParserService
 
             //services.AddDbContext<AppDbContext>();
             services.AddDbContext<AppDbContext>(ServiceLifetime.Transient);
-            services.AddScoped<DbContext, AppDbContext>();
+            services.AddTransient<DbContext, AppDbContext>();
 
             services.AddTransient<IParserService, Business.Parser.ParserService>();
 
@@ -52,10 +52,19 @@ namespace ParserService
 
             services.AddSingleton<ParseDataJob>();
 
+            var now = DateTime.Now.AddMinutes(1);
+            var h = now.Hour;
+            var m = now.Minute;
+
+            string cron = $"0 {m} {h} ? * * *";
 
             services.AddSingleton(new JobShedule(
                     jobType: typeof(ParseDataJob),
-                    cronExpression: appSettings.ParseJobCronExpression));
+                    cronExpression: cron));
+            
+            //services.AddSingleton(new JobShedule(
+            //        jobType: typeof(ParseDataJob),
+            //        cronExpression: appSettings.ParseJobCronExpression));
 
 
             services.AddTransient<JobHostedService>();

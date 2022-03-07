@@ -10,3 +10,14 @@ K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.csproj.
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\ref\Common.dll
 K:\DotaHelper\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.pdb
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Release\net5.0\Common.deps.json
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Release\net5.0\Common.dll
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Release\net5.0\ref\Common.dll
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\bin\Release\net5.0\Common.pdb
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.AssemblyInfoInputs.cache
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.AssemblyInfo.cs
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.dll
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\ref\Common.dll
+C:\Users\wwg\Desktop\D\CDV_DotaHelper\DotaHelper\Common\obj\Release\net5.0\Common.pdb

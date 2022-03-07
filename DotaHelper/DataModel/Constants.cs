@@ -13,5 +13,6 @@ namespace DataModel
         public static readonly double KDAWeight = 0.3;
         public static readonly int Reserve = 15;
         public static readonly int RequestsPerMinute = 60;
+        public static readonly int SaveEveryMatches = 10;
     }
 }
