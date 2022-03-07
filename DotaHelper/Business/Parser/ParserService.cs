@@ -1,9 +1,11 @@
 ﻿using Business.Dto;
 using Common.Logger;
+using Common.Settings;
 using DataModel;
 using DataModel.Entities;
 using DataModel.OpenDota;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,8 @@ namespace Business.Parser
     {
         private readonly DbContext Context;
         private readonly ICustomFileLogger _logger;
+        private readonly IOptions<AppSettings> _config;
+
 
         private IQueryable<Hero> Heroes;
         private List<Matches> Matches = new List<Matches>();
@@ -31,10 +35,11 @@ namespace Business.Parser
 
         private int SaveCounter = 0;
 
-        public ParserService(DbContext context, ICustomFileLogger logger)
+        public ParserService(DbContext context, ICustomFileLogger logger, IOptions<AppSettings> config)
         {
             Context = context;
             _logger = logger;
+            _config = config;
 
             Heroes = GetHeroes();
         }
@@ -61,14 +66,14 @@ namespace Business.Parser
             var creadentials = await GetCredentials();
             var proxyCount = creadentials.Count;
 
-            int scan = 12000;
+            int scan = int.Parse(_config.Value.ScanMatchesCount);
 
             MatchId = await GetMathchIdStart();
 
             var tasks = new Task[scan];
 
-            //var maxRequests = proxyCount * Constants.RequestsPerMinute;
-            var maxRequests = 12000;
+            var maxRequests = proxyCount * Constants.RequestsPerMinute;
+            //var maxRequests = 12000;
             var taskIndex = 0;
 
             try

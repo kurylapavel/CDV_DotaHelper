@@ -9,5 +9,7 @@ namespace Common.Settings
     public class AppSettings
     {
         public string ParseJobCronExpression { get; set; } = "";
+
+        public string ScanMatchesCount { get; set; } = "";
     }
 }
